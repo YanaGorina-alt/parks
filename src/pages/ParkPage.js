@@ -7,8 +7,8 @@ export default function ParkPage(props){
     const symbol = params.symbol;
     const url = ` https://developer.nps.gov/api/v1/parks?parkCode=${symbol}&api_key=${apiKey}`;
                 
-    const [park, setPark] = useState(null);
-    const [refresh, setRefresh] = useState(false)
+                
+    const [park, setPark] = useState(null)  
 
     const getPark = async () => {
         try{
@@ -20,24 +20,30 @@ export default function ParkPage(props){
         }
       };
 
-      const handleClick = ()=>{
-        setRefresh(!refresh)
-      }
+      
 
       useEffect(() => {
         getPark();
-      }, [refresh]);
+      }, []);
 
       //console.log(park.data)
 
       const loaded = () => {
+
+        const parkData = park.data[0];
+        const parkName = parkData.fullName;
+        const parkDescription = parkData.description;
+        const parkImageUrl = parkData.images[0]?.url; // Get the URL of the first image (if any)
+        
         return (
           <div>
-            <h1>
-              {park["data"][0]["fullName"]}
-            </h1>
-            <p>{park.data[0].description}</p>
-            <button onClick={handleClick}>refresh</button>
+            <h1>{parkName}</h1>
+            <p>
+              {parkDescription}
+              <div className="image-container">
+                {parkImageUrl && <img src={parkImageUrl} alt={parkName} style={{ width: "1200px", height:"500px"}}/>}
+              </div>
+            </p>
           </div>
         );
       };

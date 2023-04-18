@@ -1,0 +1,31 @@
+.nav {
+    background-color: #3E8DAD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+  }
+
+  .nav a {
+    color: #fff; 
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline; 
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
