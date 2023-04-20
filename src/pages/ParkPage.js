@@ -24,6 +24,7 @@ export default function ParkPage(props){
 
       useEffect(() => {
         getPark();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, []);
 
       //console.log(park.data)
@@ -34,16 +35,19 @@ export default function ParkPage(props){
         const parkName = parkData.fullName;
         const parkDescription = parkData.description;
         const parkImageUrl = parkData.images[0]?.url; // Get the URL of the first image (if any)
+        const fee = parkData.entranceFees[0].cost;
+
         
         return (
           <div>
             <h1>{parkName}</h1>
+            <h3>Fee for entering the park: ${fee}</h3>
             <p>
               {parkDescription}
-              <div className="image-container">
-                {parkImageUrl && <img src={parkImageUrl} alt={parkName} style={{ width: "1200px", height:"500px"}}/>}
-              </div>
             </p>
+            <div className="image-container">
+                {parkImageUrl && <img src={parkImageUrl} alt={parkName} style={{ width: "1200px", height:"500px"}}/>}
+            </div>
           </div>
         );
       };

@@ -4,6 +4,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  padding-top: 60px;
 }
 
 
@@ -14,10 +15,10 @@ body {
     align-items: center;
     padding: 1rem;
     font-family: 'Montserrat', sans-serif;
-    /* position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0; */
+    right: 0;
   }
 
   .nav a {
@@ -38,7 +39,7 @@ body {
 
 
   body {
-    background-color: #B3B7C6;
+    background-color: #cbcdd6;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -51,6 +52,7 @@ body {
   p{
     color: #4A2C0F;
     font-size: 14pt;
+    font-weight: 600; 
   }
 
   
