@@ -40,13 +40,24 @@ export default function SearchBar() {
     getParks();
   }, []);
 
-  const handleChange = (e) => {
-    const filteredParks = parks.filter(park => {
-      return park.fullName.toLowerCase().includes(e.target.value.toLowerCase());
-    });
-    setParks(filteredParks);
+
+
+const handleChange = async (e) => {
+    const value = e.target.value.toLowerCase();
+  
+    if (value === '') {
+      // If the search input is empty, fetch all parks data again
+      await getParks();
+    } else {
+      const filteredParks = parks.filter((park) =>
+        park.fullName.toLowerCase().includes(value)
+      );
+      setParks(filteredParks);
+    }
   };
 
+
+  
   const loaded = () => {
     return (
       <div>
@@ -63,6 +74,7 @@ export default function SearchBar() {
         })}
       </div>
     );
+
   };
 
   const loading = () => {

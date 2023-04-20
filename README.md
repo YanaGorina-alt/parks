@@ -5,7 +5,8 @@ Approach
 The app was developed using a single React page and React Router to manage routing between different views. The Fetch and UseEffect hooks were used to make requests to the NPS API and retrieve data, which was then stored in the app's state. The app features a search bar that allows users to search for parks by name, and each park's details can be accessed by clicking on its name.
 
 Live Site
-The app is hosted on Netlify and can be accessed by clicking on the following link: 
+The app is hosted on Netlify and can be accessed by clicking on the following link:
+#[Netlify Live Link](https://) 
 
 Installation
 To run the app locally, follow these steps:
