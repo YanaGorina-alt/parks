@@ -6,7 +6,7 @@ The app was developed using a single React page and React Router to manage routi
 
 Live Site
 The app is hosted on Netlify and can be accessed by clicking on the following link:
-#[Netlify Live Link](https://) 
+#[Netlify Live Link](https://nationalparksexploration.netlify.app/) 
 
 Installation
 To run the app locally, follow these steps:
