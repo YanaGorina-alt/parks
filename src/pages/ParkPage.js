@@ -2,7 +2,8 @@ import {useParams} from "react-router-dom"
 import {useState, useEffect} from "react";
 
 export default function ParkPage(props){
-    const apiKey = "BKbVJwMHWebXr4eXI9n8TH4sCi0zhT2FTgRcEw0W";
+  
+    const apiKey = process.env.REACT_APP_API;
     const params = useParams()
     const symbol = params.symbol;
     const url = ` https://developer.nps.gov/api/v1/parks?parkCode=${symbol}&api_key=${apiKey}`;
@@ -35,7 +36,7 @@ export default function ParkPage(props){
         const parkName = parkData.fullName;
         const parkDescription = parkData.description;
         const parkImageUrl = parkData.images[0]?.url; // Get the URL of the first image (if any)
-        const fee = parkData.entranceFees[0].cost;
+        const fee = parkData.entranceFees[0]?.cost;
 
         
         return (
