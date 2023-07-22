@@ -42,7 +42,11 @@ export default function ParkPage(props){
         return (
           <div>
             <h1>{parkName}</h1>
-            <h3>Fee for entering the park: ${fee}</h3>
+            {fee !== undefined && (
+              <h3>
+                Fee for entering the park: {fee === 0 ? "Free" : `$${fee}`}
+              </h3>
+            )}
             <p>
               {parkDescription}
             </p>
