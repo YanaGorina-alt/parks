@@ -11,7 +11,10 @@ The app is hosted on Netlify and can be accessed by clicking on the following li
 Installation
 To run the app locally, follow these steps:
 
+Obtain your API key from: #[NPS API Link](https://www.nps.gov/subjects/developer/get-started.htm)
 Clone the repository to your local machine
+make a .env file in your project folder (same directory as the .gitignore file)
+in the .env declare a variable named REACT_APP_API and assign the value of your API key (REACT_APP_API=YOUR_API_KEY), with no space, no quotes, and no semicolon at the end.
 Install the required dependencies by running npm install
 Start the development server by running npm start
 Technologies Used
